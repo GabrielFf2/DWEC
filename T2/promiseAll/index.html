@@ -1,0 +1,69 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+</head>
+<body>
+<div id="app"></div>
+<script>
+    //temps aprox 6,5 segons
+    // for (let i = 1; i < 11; i++) {
+    //     fetch(`https://theteacher.codiblau.com/public/exercicis/other/asincron-get?num=${i}`)
+    //         .then(r=> r.text())
+    //         .then(function (r) {
+    //             console.log(r)
+    //             document.querySelector("#app").innerHTML += `<p>${r}</p>`;
+    //         });
+    // }
+
+    //temps aprox uns 29 segons
+    //     (async()=>{
+    //         for (let i = 1; i < 11; i++) {
+    //             const respons = await fetch(`https://theteacher.codiblau.com/public/exercicis/other/asincron-get?num=${i}`);
+    //             const r = await respons.text();
+    //             console.log(r)
+    //             document.querySelector("#app").innerHTML += `<p>${r}</p>`;
+    //         }
+    //     })()
+
+    //temps aprox 6,5 segons
+    // (async () => {
+    //     const promises = [];
+    //     for (let i =1 ; i < 11; i++) {
+    //         const respons = fetch(`https://theteacher.codiblau.com/public/exercicis/other/asincron-get?num=${i}`);
+    //         promises.push(respons);
+    //     }
+    //     Promise.all(promises).then(responses => {
+    //         const promisesFetch = [];
+    //         for (let i = 0; i < responses.length; i++) {
+    //             const text = responses[i].text();
+    //             promisesFetch.push(text)
+    //         }
+    //         Promise.all(promisesFetch).then(dataResponses => {
+    //             for (let i = 0; i < dataResponses.length; i++) {
+    //                 document.querySelector("#app").innerHTML += `<p>${dataResponses[i]}</p>`;
+    //             }
+    //         })
+    //     });
+    // })()
+
+    (async () => {
+        const promises = [];
+        for (let i = 1; i < 11; i++) {
+            const respons = fetch(`https://theteacher.codiblau.com/public/exercicis/other/asincron-get?num=${i}`)
+                            .then(r => r.text());
+            promises.push(respons);
+        }
+        const dataResponses = await Promise.all(promises);
+
+        for (let i = 0; i < dataResponses.length; i++) {
+            document.querySelector("#app").innerHTML += `<p>${dataResponses[i]}</p>`;
+        }
+    })()
+
+    //IIFE ---> Immediately invoked function expression
+
+</script>
+</body>
+</html>

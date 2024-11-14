@@ -1,0 +1,40 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>this</title>
+</head>
+<body>
+<button id="button1">Click me 1</button>
+<button id="button2">Click me 2</button>
+<script>
+    //Regular functions el seu SCOPE es la instancia
+    document.querySelector("#button1").addEventListener('click',function (){
+        console.log(this);
+        this.style.background="gray";
+    })
+    //Arrow functions l'escope es la definicio
+    document.querySelector("#button2").addEventListener('click', ()=>{
+        console.log(this);
+        // this.style.background="blue";
+        document.querySelector("#button2").style.background="gray";
+    })
+    //Bind es per injectar un objecte extern a la definicio de tal forma que tens l'objet din la definicio , es a dir el this pasara a ser el que pasis per el bind
+    function Persona(nom ,cognoms){
+        this.nom = nom;
+        this.cognoms = cognoms;
+        this.nomComplet = function (){
+            return "Regular "+this.nom + " " + this.cognoms;
+        }
+
+        this.nomComplet2 =  ()=> "Arrow "+this.nom + " " + this.cognoms;
+    }
+    const tomeu = new Persona("Tomeu" ,"Castro");
+    let nomComplet1 = tomeu.nomComplet.bind(tomeu);
+    let nomComplet2 = tomeu.nomComplet2;
+
+    console.log(nomComplet1() , nomComplet2())
+
+</script>
+</body>
+</html>

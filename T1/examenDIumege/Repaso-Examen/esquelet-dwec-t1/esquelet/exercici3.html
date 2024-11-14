@@ -1,0 +1,54 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+    <title>Examen JS Vanilla</title>
+    <meta charset="UTF-8">
+    <style>
+        @import url('https://fonts.googleapis.com/css?family=Butterfly+Kids');
+
+        body {
+            background-color: #333;
+            font-family: 'Butterfly Kids', cursive;
+            color: white;
+            text-align: center;
+        }
+
+        h1 {
+            font-size: 60px;
+        }
+
+        main {
+            text-align: center;
+        }
+
+        canvas {
+            font-family: 'Butterfly Kids', cursive;
+        }
+
+        button {
+            font-family: 'Butterfly Kids', cursive;
+            font-size: 20px;
+        }
+    </style>
+</head>
+
+<body>
+    <header>
+        <h1>LES HORES</h1>
+    </header>
+    <main>
+        <canvas id="canvas" width="400" height="400"></canvas>
+        <input type="hidden" value="10" id="hours">
+        <input type="hidden" value="35" id="minutes">
+        <input type="hidden" value="55" id="seconds">
+    </main>
+
+    <script src="clock.js"></script>
+    <script src="actividad.js"></script>
+    <script>
+        initClock();
+    </script>
+</body>
+
+</html>

@@ -1,0 +1,37 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Contador de Tareas Pendientes</title>
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+            background-color: #f4f4f4;
+            margin: 0;
+            padding: 20px;
+        }
+        input {
+            padding: 10px;
+            width: 200px;
+        }
+        button {
+            padding: 10px;
+            margin-left: 10px;
+        }
+        .completed {
+            text-decoration: line-through;
+            color: gray;
+        }
+    </style>
+</head>
+<body>
+<h1>Contador de Tareas Pendientes</h1>
+<input type="text" id="taskInput" placeholder="Agregar nueva tarea">
+<button id="addTaskButton">Agregar Tarea</button>
+<h2>Tareas Pendientes:</h2>
+<ul id="taskList"></ul>
+
+<script src="scripts.js"></script>
+</body>
+</html>

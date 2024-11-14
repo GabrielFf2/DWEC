@@ -1,0 +1,26 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+</head>
+<body>
+
+<script>
+    // Definimos una función que toma otra función como parámetro
+    function saludar(nombre, callback) {
+        console.log(`Hola, ${nombre}!`);
+        // Llamamos a la función de callback
+        callback();
+    }
+
+    // Definimos una función de callback
+    function despedir() {
+        console.log("¡Hasta luego!");
+    }
+
+    // Llamamos a la función saludar y le pasamos la función de callback
+    saludar("Juan", despedir);
+</script>
+</body>
+</html>

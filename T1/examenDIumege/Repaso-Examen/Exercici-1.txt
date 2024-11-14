@@ -1,0 +1,11 @@
+1- Digues si les següents afirmacions són vertaderes o falses. En cas de ser falses 
+explica el per què de l’error: (1 punt) 
+a) La comanda “var x” té com a valor per defecte null [FALSE] Perque es undefined
+b) Javascript és un llenguatge de programació exclusiu d’entorn client. [FALSE], Perque tambe se pot executar codi en el servidor
+c) Totes les funcions de Javascript són compatibles amb tots els navegadors del món, presents i 
+passats, ja que totes les funcions noves tenen retrocompatibilitat. [FALSE] Segon la versio del navedor no es compatible
+d) 3=“3” donarà el mateix resultat que 2==“2” ja que ambdós resultats són true. [FALSE] Un compara el valor i el altre el valor i el tipus
+
+
+2- Què és una funció de callback? Posa un exemple (1 punts)
+Es un funcion que permet pasar per otro funcion y poder ejecutar

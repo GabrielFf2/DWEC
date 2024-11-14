@@ -1,0 +1,33 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+</head>
+<body>
+    <div id="app"></div>
+    <script>
+
+        const second = document.createElement("P");
+        second.innerHTML = "0";
+        document.querySelector("#app").appendChild(second);
+
+        const crono = setInterval(function(){
+            const currentSeconds = parseInt(document.querySelector("p").innerHTML);
+            const seconds = document.querySelector("p");
+            second.innerHTML=(currentSeconds+1);
+        },1000)
+
+        const stop = document.createElement("BUTTON");
+        stop.innerHTML ="Aturat";
+
+        stop.addEventListener('click',()=>{
+            clearInterval(crono);
+        })
+        document.querySelector("#app").appendChild(stop);
+
+
+
+    </script>
+</body>
+</html>
