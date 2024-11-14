@@ -5,7 +5,27 @@
     <title>Formulari D'animals</title>
 </head>
 <body>
-<div id="app"></div>
+<div id="app">
+    <form>
+        <label for="nom">nom</label>
+        <input id="nom">
+        <label>sexe :</label>
+        <label>
+            <input name="sexe" type="radio" value="MASC">
+        </label> Masculí
+        <label>
+            <input name="sexe" type="radio" value="FEM">
+        </label> Femení
+
+
+        <label for="numreg"> Numero de registre</label>
+        <input id="numreg">
+
+        <label for="tipus">tipus</label>
+        <input id="tipus">
+        <input type="submit" value="Desar Animal">
+    </form>
+</div>
 <script src="View/AnimalForm.js" type="module"></script>
 </body>
 </html>

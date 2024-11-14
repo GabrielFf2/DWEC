@@ -1,18 +1,18 @@
 export class Animal {
 
     #id;
-    #Nom;
-    #Sexe;
-    #Num;
-    #Tipus;
+    #nom;
+    #sexe;
+    #num;
+    #tipus;
 
 
     constructor(id, Nom, Sexe, Num, Tipus) {
         this.#id = id;
-        this.#Nom = Nom;
-        this.#Sexe = Sexe;
-        this.#Num = Num;
-        this.#Tipus = Tipus;
+        this.#nom = Nom;
+        this.#sexe = Sexe;
+        this.#num = Num;
+        this.#tipus = Tipus;
     }
 
     get id() {
@@ -23,35 +23,35 @@ export class Animal {
         this.#id = value;
     }
 
-    get Nom() {
-        return this.#Nom;
+    get nom() {
+        return this.#nom;
     }
 
-    set Nom(value) {
-        this.#Nom = value;
+    set nom(value) {
+        this.#nom = value;
     }
 
-    get Sexe() {
-        return this.#Sexe;
+    get sexe() {
+        return this.#sexe;
     }
 
-    set Sexe(value) {
-        this.#Sexe = value;
+    set sexe(value) {
+        this.#sexe = value;
     }
 
-    get Num() {
-        return this.#Num;
+    get num() {
+        return this.#num;
     }
 
-    set Num(value) {
-        this.#Num = value;
+    set num(value) {
+        this.#num = value;
     }
 
-    get Tipus() {
-        return this.#Tipus;
+    get tipus() {
+        return this.#tipus;
     }
 
-    set Tipus(value) {
-        this.#Tipus = value;
+    set tipus(value) {
+        this.#tipus = value;
     }
 }
